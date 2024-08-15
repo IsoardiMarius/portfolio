@@ -8,6 +8,7 @@ const a = (light: string, dark?: string): Asset =>
 	dark ? { dark: gh(dark), light: gh(light) } : gh(light);
 
 const Assets = {
+	Ansible: a('ansible.svg'),
 	AWS: a('aws.svg'),
 	Bootstrap: a('bootstrap.svg'),
 	C: a('c.svg'),
@@ -49,7 +50,7 @@ const Assets = {
 	Flutter: a('flutter.svg'),
 	Java: a('java.png'),
 	AdonisJs: a('adonis.png'),
-	Android: a('android.png'),
+	Android: a('android.svg'),
 	Angular: a('angular.png'),
 	PostgreSQL: a('postgres.png'),
 	Firebase: a('firebase.png'),
@@ -70,7 +71,13 @@ const Assets = {
 	Jest: a('jest.png'),
 	Unocss: a('unocss.svg'),
 	Ruvy: a('ruvy.svg'),
-	Postcss: a('postcss.svg')
+	Postcss: a('postcss.svg'),
+	Prisma: a('prisma.svg'),
+	MySql: a('mysql.svg'),
+	Grafana: a('grafana.svg'),
+	Prometheus: a('prometheus.svg'),
+	Linux: a('linux.svg'),
+	SpringBoot: a('spring-boot.svg'),
 };
 
 export default Assets;

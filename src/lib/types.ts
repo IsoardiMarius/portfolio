@@ -45,6 +45,7 @@ export interface IconLink extends Link {
 export interface SkillCategory<S extends string = string> {
 	slug: S;
 	name: string;
+	order: number;
 }
 
 export interface Skill<S extends string = string> extends Omit<Item<S>, 'shortDescription'> {
