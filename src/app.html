@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<title>Marius Isoardi</title>
 		<meta charset="utf-8" />
+		<script>
+			(function() {
+				const key = '@riadh-adrani-theme';
+				const fromStore = localStorage.getItem(key);
+				const prefersDarkScheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+				const theme = fromStore ? JSON.parse(fromStore) : prefersDarkScheme;
+
+				if (theme) {
+					document.documentElement.setAttribute('data-theme', 'dark');
+				} else {
+					document.documentElement.setAttribute('data-theme', 'light');
+				}
+			})();
+		</script>
 		<link rel="icon" href="%sveltekit.assets%/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		%sveltekit.head%

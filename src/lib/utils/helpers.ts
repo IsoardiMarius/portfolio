@@ -132,25 +132,25 @@ export function computeExactDuration(from: Date, to: Date = new Date()): string 
 
 	if (years >= 1) {
 		remaining = remaining % YEAR;
-		display.push(`${Math.trunc(years)} year${years >= 2 ? 's' : ''}`);
+		display.push(`${Math.trunc(years)} an${years >= 2 ? 's' : ''}`);
 	}
 
 	const months = remaining / MONTH;
 	if (months >= 1) {
 		remaining = remaining % MONTH;
-		display.push(`${Math.trunc(months)} month${months >= 2 ? 's' : ''}`);
+		display.push(`${Math.trunc(months)} moi${months >= 2 ? 's' : ''}`);
 	}
 
 	const weeks = remaining / WEEK;
 	if (weeks >= 1) {
 		remaining = remaining % WEEK;
-		display.push(`${Math.trunc(weeks)} week${weeks >= 2 ? 's' : ''}`);
+		display.push(`${Math.trunc(weeks)} semaine${weeks >= 2 ? 's' : ''}`);
 	}
 
 	const days = remaining / DAY;
 	if (days >= 1) {
 		remaining = remaining % DAY;
-		display.push(`${Math.trunc(days)} day${days >= 2 ? 's' : ''}`);
+		display.push(`${Math.trunc(days)} jour${days >= 2 ? 's' : ''}`);
 	}
 
 	if (display.length === 0) {
@@ -162,7 +162,7 @@ export function computeExactDuration(from: Date, to: Date = new Date()): string 
 			if (display.length === 1 || index === display.length - 1) return it;
 
 			if (index === display.length - 2) {
-				return `${it} and`;
+				return `${it} et`;
 			}
 
 			return `${it},`;

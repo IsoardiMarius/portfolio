@@ -63,4 +63,4 @@ export const items: Array<Project> = [
 	}
 ];
 
-export const title = 'Projects';
+export const title = 'Projets';

@@ -16,8 +16,7 @@ export const name = 'Marius';
 export const lastName = 'Isoardi';
 
 export const description =
-	'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, rerum. Debitis accusantium deleniti enim iste dignissimos? Similique, exercitationem! Odit vero, numquam quae ratione maxime sunt reiciendis laudantium quaerat iure ipsum!';
-
+	'Développeur et expert DevOps, je conçois des solutions digitales sur mesure qui allient innovation et performance. Disponible pour donner vie à vos projets freelance dès 250€ par jour. Construisons ensemble l\'avenir de votre entreprise.'
 export const links: Array<{ platform: Platform; link: string }> = [
 	{ platform: Platform.GitHub, link: 'https://github.com/IsoardiMarius' },
 	{
