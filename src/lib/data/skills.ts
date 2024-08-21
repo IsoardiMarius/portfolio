@@ -41,26 +41,23 @@ export const items = [
 	defineSkill({
 		slug: 'js',
 		color: 'yellow',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+		description: 'JavaScript est un langage de programmation que j’ai utilisé dans divers projets front-end pour créer des interfaces interactives et dynamiques.',
 		logo: Assets.JavaScript,
-		name: 'Javascript',
+		name: 'JavaScript',
 		category: 'pro-lang'
 	}),
 	defineSkill({
 		slug: 'ts',
 		color: 'blue',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+		description: 'TypeScript est un sur-ensemble typé de JavaScript que j’ai utilisé pour améliorer la robustesse et la maintenabilité du code.',
 		logo: Assets.TypeScript,
-		name: 'Typescript',
+		name: 'TypeScript',
 		category: 'pro-lang'
 	}),
 	defineSkill({
 		slug: 'sass',
 		color: 'pink',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+		description: 'Sass est un préprocesseur CSS que j’ai employé pour structurer et gérer efficacement les styles complexes dans mes projets.',
 		logo: Assets.Sass,
 		name: 'Sass',
 		category: 'markup-style'
@@ -68,8 +65,7 @@ export const items = [
 	defineSkill({
 		slug: 'reactjs',
 		color: 'cyan',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+		description: 'React est une bibliothèque JavaScript que j’ai utilisée pour développer des interfaces utilisateur réactives et modulaires.',
 		logo: Assets.ReactJs,
 		name: 'React Js',
 		category: 'library-frontend'
@@ -77,8 +73,7 @@ export const items = [
 	defineSkill({
 		slug: 'node',
 		color: 'green',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+		description: 'Node.js est une plateforme JavaScript côté serveur que j’ai exploitée pour construire des applications backend performantes.',
 		logo: Assets.NodeJs,
 		name: 'NodeJs',
 		category: 'pro-lang'
@@ -86,44 +81,39 @@ export const items = [
 	defineSkill({
 		slug: 'express',
 		color: 'green',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+		description: 'Express.js est un framework pour Node.js que j’ai utilisé pour développer des APIs RESTful et des applications web robustes.',
 		logo: Assets.ExpressJs,
 		name: 'ExpressJs',
 		category: 'framework-backend'
 	}),
 	defineSkill({
-		slug: "java",
-		color: "blue",
-		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.",
+		slug: 'java',
+		color: 'blue',
+		description: 'Java est un langage de programmation que j’ai utilisé dans le développement d’applications Android et d’applications backend robustes.',
 		logo: Assets.Java,
-		name: "Java",
-		category: "pro-lang"
+		name: 'Java',
+		category: 'pro-lang'
 	}),
 	defineSkill({
-		slug: "spring-boot",
-		color: "green",
-		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.",
+		slug: 'spring-boot',
+		color: 'green',
+		description: 'Spring Boot est un framework Java que j’ai utilisé pour développer des applications backend robustes et évolutives.',
 		logo: Assets.SpringBoot,
-		name: "Spring Boot",
-		category: "framework-backend"
+		name: 'Spring Boot',
+		category: 'framework-backend'
 	}),
 	defineSkill({
 		slug: 'mysql',
 		color: 'blue',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+		description: 'MySQL est un système de gestion de bases de données relationnelles que j’ai utilisé pour gérer des données structurées dans mes projets.',
 		logo: Assets.MySql,
-		name: 'Mysql',
+		name: 'MySQL',
 		category: 'db'
 	}),
 	defineSkill({
 		slug: 'postgres',
 		color: 'blue',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+		description: 'PostgreSQL est un système de gestion de bases de données open-source que j’ai utilisé pour des applications nécessitant une gestion avancée des données.',
 		logo: Assets.PostgreSQL,
 		name: 'PostgreSQL',
 		category: 'db'
@@ -131,8 +121,7 @@ export const items = [
 	defineSkill({
 		slug: 'prisma',
 		color: 'blue',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+		description: 'Prisma est un ORM moderne que j’ai utilisé pour simplifier les interactions entre l’application et la base de données.',
 		logo: Assets.Prisma,
 		name: 'Prisma',
 		category: 'orm'
@@ -140,8 +129,7 @@ export const items = [
 	defineSkill({
 		slug: 'jest',
 		color: 'red',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+		description: 'Jest est un framework de test JavaScript que j’ai utilisé pour assurer la qualité et la fiabilité du code dans mes projets.',
 		logo: Assets.Jest,
 		name: 'Jest',
 		category: 'test'
@@ -149,8 +137,7 @@ export const items = [
 	defineSkill({
 		slug: 'ansible',
 		color: 'orange',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+		description: 'Ansible est un outil d’automatisation que j’ai utilisé pour orchestrer le déploiement et la configuration des serveurs.',
 		logo: Assets.Ansible,
 		name: 'Ansible',
 		category: 'devops'
@@ -158,35 +145,31 @@ export const items = [
 	defineSkill({
 		slug: 'kubernetes',
 		color: 'blue',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+		description: 'Kubernetes est un système d’orchestration de conteneurs que j’ai utilisé pour gérer le déploiement et la mise à l’échelle d’applications containerisées.',
 		logo: Assets.Kubernetes,
 		name: 'Kubernetes',
 		category: 'devops'
 	}),
 	defineSkill({
-		slug: "grafana",
-		color: "orange",
-		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.",
-		logo: Assets.Grafana,
-		name: "Grafana",
-		category: "devops"
-	}),
-	defineSkill({
-		slug: "prometheus",
-		color: "orange",
-		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.",
-		logo: Assets.Prometheus,
-		name: "Prometheus",
-		category: "devops"
-	}),
-	defineSkill({
-		slug:'alertmanager',
+		slug: 'grafana',
 		color: 'orange',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+		description: 'Grafana est un outil de surveillance et de visualisation que j’ai utilisé pour surveiller la performance des systèmes et applications.',
+		logo: Assets.Grafana,
+		name: 'Grafana',
+		category: 'devops'
+	}),
+	defineSkill({
+		slug: 'prometheus',
+		color: 'orange',
+		description: 'Prometheus est un système de surveillance open-source que j’ai utilisé pour collecter et analyser les métriques des applications.',
+		logo: Assets.Prometheus,
+		name: 'Prometheus',
+		category: 'devops'
+	}),
+	defineSkill({
+		slug: 'alertmanager',
+		color: 'orange',
+		description: 'Alert Manager est un outil de gestion des alertes que j’ai utilisé en conjonction avec Prometheus pour gérer les notifications des incidents.',
 		logo: Assets.Prometheus,
 		name: 'Alert Manager',
 		category: 'devops'
@@ -194,30 +177,59 @@ export const items = [
 	defineSkill({
 		slug: 'tailwindcss',
 		color: 'blue',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+		description: 'Tailwind CSS est un framework CSS utilitaire que j’ai utilisé pour créer des interfaces utilisateur modernes et réactives.',
 		logo: Assets.Tailwind,
 		name: 'Tailwind',
 		category: 'markup-style'
 	}),
 	defineSkill({
 		slug: 'linux',
-		color: "orange",
-		description:
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.",
+		color: 'orange',
+		description: 'Linux est un système d’exploitation open-source que j’ai utilisé pour gérer les serveurs et les environnements de développement.',
 		logo: Assets.Linux,
-		name: "Linux",
-		category: "sysadmin"
+		name: 'Linux',
+		category: 'sysadmin'
 	}),
 	defineSkill({
 		slug: 'nginx',
-		color: "green",
-		description:
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.",
+		color: 'green',
+		description: 'Nginx est un serveur web et reverse proxy que j’ai utilisé pour servir des applications web de manière performante.',
 		logo: Assets.Nginx,
-		name: "Nginx",
-		category: "others"
-	})
+		name: 'Nginx',
+		category: 'others'
+	}),
+	defineSkill({
+		slug: 'android',
+		color: 'green',
+		description: 'Android est un système d’exploitation mobile que j’ai utilisé pour développer des applications mobiles natives.',
+		logo: Assets.Android,
+		name: 'Android',
+		category: 'others'
+	}),
+	defineSkill({
+		slug: 'ruby-on-rails',
+		color: 'red',
+		description: 'Ruby on Rails est un framework web que j’ai utilisé pour développer des applications web robustes et scalables.',
+		logo: Assets.Rails,
+		name: 'Ruby on Rails',
+		category: 'framework-backend'
+	}),
+	defineSkill({
+		slug: 'grpc',
+		color: 'blue',
+		description: 'gRPC est un framework RPC open-source que j’ai utilisé pour implémenter des services backend efficaces et performants.',
+		logo: Assets.Grpc,
+		name: 'gRPC',
+		category: 'framework-backend'
+	}),
+	defineSkill({
+		slug: 'docker',
+		color: 'blue',
+		description: 'Docker est une plateforme de virtualisation que j’ai utilisé pour containeriser des applications afin de faciliter leur déploiement.',
+		logo: Assets.Docker,
+		name: 'Docker',
+		category: 'framework-backend'
+	}),
 ] as const;
 
 export const title = 'Skills';

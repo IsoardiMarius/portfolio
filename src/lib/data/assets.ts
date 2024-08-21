@@ -78,6 +78,13 @@ const Assets = {
 	Prometheus: a('prometheus.svg'),
 	Linux: a('linux.svg'),
 	SpringBoot: a('spring-boot.svg'),
+	Rails: a('rails.svg'),
+	Grpc: a('grpc.svg'),
+	Subclic: a('subclic.png'),
+	Openclassrooms: a('openclassrooms.webp'),
+	Hexacoffre: a('hexacoffre.svg'),
+	DigitalExpress: a('digitalexpress.png'),
+	Epitech: a('epitech.png'),
 };
 
 export default Assets;

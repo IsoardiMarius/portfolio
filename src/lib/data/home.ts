@@ -1,6 +1,14 @@
 import { Platform } from '$lib/types';
 import { getSkills } from './skills';
 
+// todo:
+// 1. Delete list contact on home
+// 2. Add navbar from Magic UI
+// 3. Add data for skills, experience, education, projects, resume
+// 4. Add multiple languages
+// 5. Add picture of me
+
+
 export const title = 'Home';
 
 export const name = 'Marius';
@@ -26,4 +34,4 @@ export const links: Array<{ platform: Platform; link: string }> = [
 	}
 ];
 
-export const skills = getSkills('ansible', 'kubernetes', 'grafana', 'prometheus', 'nginx', 'linux', 'java', 'spring-boot', 'js', 'ts', 'node', 'express', 'mysql', 'alertmanager', 'postgres', 'prisma', 'jest', 'reactjs', 'tailwindcss', 'sass')
+export const skills = getSkills('ansible', 'kubernetes', 'grafana', 'prometheus', 'nginx', 'linux', 'java', 'spring-boot', 'js', 'ts', 'node', 'express', 'mysql', 'alertmanager', 'postgres', 'prisma', 'jest', 'reactjs', 'tailwindcss', 'sass', 'android')
