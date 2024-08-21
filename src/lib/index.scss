@@ -90,6 +90,7 @@ body {
 	--border: var(--dark-2);
 	--border-hover: var(--light-7);
 
+	--dark-0-60: rgba(0, 0, 0, 0);  /* Moins sombre */
 	--main-60: var(--dark-0-60);
 
 	--code-keyword: var(--code-keyword-dark);
@@ -99,6 +100,7 @@ body {
 	--code-operator: var(--code-operator-dark);
 	--link: var(--link-light);
 }
+
 
 :root[data-theme='light'] {
 	color-scheme: light;
@@ -125,6 +127,7 @@ body {
 	--border: var(--light-1);
 	--border-hover: var(--dark-8);
 
+	--light-0-60: rgba(255, 255, 255, 0);  /* Moins lumineux */
 	--main-60: var(--light-0-60);
 
 	--code-keyword: var(--code-keyword-light);
@@ -134,6 +137,7 @@ body {
 	--code-operator: var(--code-operator-light);
 	--link: var(--link-dark);
 }
+
 
 .container {
 	max-width: 1200px;

@@ -3,7 +3,7 @@
 	import Icon from '$lib/components/Icon/Icon.svelte';
 	import MainTitle from '$lib/components/MainTitle/MainTitle.svelte';
 	import { titleSuffix } from '@data/app';
-	import { links, description, lastName, name, title, skills } from '@data/home';
+	import { links, description, lastName, name, title, skills, subDescription } from '@data/home';
 	import { items as skillsItems } from '@data/skills';
 	import { useTitle } from '$lib/utils/helpers';
 	import { isBlank } from '@riadh-adrani/utils';
@@ -27,6 +27,10 @@
 		<MainTitle classes="md:text-left ">{name} {lastName},</MainTitle>
 		<p class="text-[var(--tertiary-text)]  text-center md:text-left text-[1.2em] font-extralight">
 			{description}
+		</p>
+		<br/>
+		<p class="text-[var(--tertiary-text)]  text-center md:text-left text-[1.2em] font-extralight">
+			{subDescription}
 		</p>
 		<div class="row justify-center md:justify-start p-y-15px p-x-0px gap-2">
 			{#each links as link}

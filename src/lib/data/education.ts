@@ -3,7 +3,7 @@ import type { Education } from '../types';
 
 export const items: Array<Education> = [
 	{
-		degree: "Master's degree in Computer Science",
+		degree: "Master Pro Cloud",
 		description: 'Formation axée sur le développement de compétences avancées en informatique, couvrant un large éventail de sujets techniques et théoriques. Cette formation inclut des projets pratiques, des stages, et l\'acquisition de compétences en gestion de projets IT.',
 		location: 'France',
 		logo: Assets.Epitech,

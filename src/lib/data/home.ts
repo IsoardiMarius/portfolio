@@ -3,11 +3,7 @@ import { getSkills } from './skills';
 
 // todo:
 // 1. Delete list contact on home
-// 2. Add navbar from Magic UI
-// 3. Add data for skills, experience, education, projects, resume
-// 4. Add multiple languages
-// 5. Add picture of me
-
+// 3. Add project, resume
 
 export const title = 'Home';
 
@@ -17,6 +13,9 @@ export const lastName = 'Isoardi';
 
 export const description =
 	'Développeur et expert DevOps, je conçois des solutions digitales sur mesure qui allient innovation et performance. Disponible pour donner vie à vos projets freelance dès 250€ par jour. Construisons ensemble l\'avenir de votre entreprise.'
+
+export const subDescription =
+	'Vous avez ci-dessous différents liens, comme mon Github, Linkedin, mon mail, etc. Pour un premier contact n\'hésitez pas à me contact idéalement par Linkedin ou email.'
 export const links: Array<{ platform: Platform; link: string }> = [
 	{ platform: Platform.GitHub, link: 'https://github.com/IsoardiMarius' },
 	{

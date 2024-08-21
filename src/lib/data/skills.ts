@@ -5,16 +5,16 @@ import { omit, type StringWithAutoComplete } from '@riadh-adrani/utils';
 const defineSkillCategory = <S extends string>(data: SkillCategory<S>): SkillCategory<S> => data;
 
 const categories = [
-	defineSkillCategory({ name: 'System Administration', slug: 'sysadmin', order: 1 }),
+	defineSkillCategory({ name: 'Les plus utilisés', slug: 'most-used', order: 0 }),
+	defineSkillCategory({ name: 'Administration Système', slug: 'sysadmin', order: 1 }),
 	defineSkillCategory({ name: 'DevOps', slug: 'devops', order: 2 }),
-	defineSkillCategory({ name: 'Programming Languages', slug: 'pro-lang', order: 3 }),
+	defineSkillCategory({ name: 'Languages de programmation', slug: 'pro-lang', order: 3 }),
 	defineSkillCategory({ name: 'Frameworks Backend', slug: 'framework-backend', order: 4 }),
-	defineSkillCategory({ name: 'Libraries Frontend ', slug: 'library-frontend', order: 5 }),
-	defineSkillCategory({ name: 'Languages', slug: 'lang', order: 6 }),
+	defineSkillCategory({ name: 'Librairies Frontend ', slug: 'library-frontend', order: 5 }),
 	defineSkillCategory({ name: 'Databases', slug: 'db', order: 7 }),
 	defineSkillCategory({ name: 'ORMs', slug: 'orm', order: 8 }),
 
-	defineSkillCategory({ name: 'Testing', slug: 'test', order: 9 }),
+	defineSkillCategory({ name: 'Tests', slug: 'test', order: 9 }),
 
 	defineSkillCategory({ name: 'Markup & Style', slug: 'markup-style', order: 10 }),
 
@@ -38,6 +38,62 @@ const defineSkill = <S extends string>(
 };
 
 export const items = [
+	defineSkill({
+		slug: 'ansible-most-used',
+		color: 'orange',
+		description: 'Ansible est un outil d’automatisation que j’ai utilisé pour orchestrer le déploiement et la configuration des serveurs.',
+		logo: Assets.Ansible,
+		name: 'Ansible',
+		category: 'most-used'
+	}),
+	defineSkill({
+		slug: 'java-most-used',
+		color: 'blue',
+		description: 'Java est un langage de programmation que j’ai utilisé dans le développement d’applications Android et d’applications backend robustes.',
+		logo: Assets.Java,
+		name: 'Java',
+		category: 'most-used'
+	}),
+	defineSkill({
+		slug: 'ts-most-used',
+		color: 'blue',
+		description: 'TypeScript est un sur-ensemble typé de JavaScript que j’ai utilisé pour améliorer la robustesse et la maintenabilité du code.',
+		logo: Assets.TypeScript,
+		name: 'TypeScript',
+		category: 'most-used'
+	}),
+	defineSkill({
+		slug: 'spring-boot-most-used',
+		color: 'green',
+		description: 'Spring Boot est un framework Java que j’ai utilisé pour développer des applications backend robustes et évolutives.',
+		logo: Assets.SpringBoot,
+		name: 'Spring Boot',
+		category: 'most-used'
+	}),
+	defineSkill({
+		slug: 'express-most-used',
+		color: 'green',
+		description: 'Express.js est un framework pour Node.js que j’ai utilisé pour développer des APIs RESTful et des applications web robustes.',
+		logo: Assets.ExpressJs,
+		name: 'ExpressJs',
+		category: 'most-used'
+	}),
+	defineSkill({
+		slug: 'reactjs-most-used',
+		color: 'cyan',
+		description: 'React est une bibliothèque JavaScript que j’ai utilisée pour développer des interfaces utilisateur réactives et modulaires.',
+		logo: Assets.ReactJs,
+		name: 'React Js',
+		category: 'most-used'
+	}),
+	defineSkill({
+		slug: 'docker-most-used',
+		color: 'cyan',
+		description: 'Docker est une plateforme de virtualisation que j’ai utilisé pour containeriser des applications afin de faciliter leur déploiement.',
+		logo: Assets.Docker,
+		name: 'Docker',
+		category: 'most-used'
+	}),
 	defineSkill({
 		slug: 'js',
 		color: 'yellow',
