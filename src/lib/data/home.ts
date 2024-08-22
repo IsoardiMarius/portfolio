@@ -2,9 +2,14 @@ import { Platform } from '$lib/types';
 import { getSkills } from './skills';
 
 // todo:
-// 3. add le bouddoir, oh my food, la panthere, ect
+// add le bouddoir, oh my food, la panthere, ect
 // Revoir tous les textes
+// AJouter france sur experience ppur expliquer d'aller voir en detail sur linkdin
 // Mettre a jour profil github
+
+// Faire une photo professionnel et mettre sur linkdin, malte, cv; github, portfolio
+// Faire site digital express
+// Imprimer carte vistaprint
 
 export const title = 'Home';
 
