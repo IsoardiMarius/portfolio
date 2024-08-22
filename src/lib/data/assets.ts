@@ -92,6 +92,16 @@ const Assets = {
 	LeBouddoir1: a('lebouddoir1.png'),
 	LeBouddoir2: a('lebouddoir2.png'),
 	LeBouddoir3: a('lebouddoir3.png'),
+	LeBouddoir4: a('lebouddoir4.png'),
+	LaPanthere: a('lapanthere.png'),
+	LaPanthere1: a('lapanthere1.png'),
+	LaPanthere2: a('lapanthere2.png'),
+	LaPanthere3: a('lapanthere3.png'),
+	LaPanthere4: a('lapanthere4.png'),
+	OhMyFood1: a('ohmyfood1.png'),
+	OhMyFood2: a('ohmyfood2.png'),
+	OhMyFood3: a('ohmyfood3.png'),
+	OhMyFood4: a('ohmyfood4.png'),
 
 };
 

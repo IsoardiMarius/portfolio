@@ -2,9 +2,9 @@ import { Platform } from '$lib/types';
 import { getSkills } from './skills';
 
 // todo:
-// add le bouddoir, oh my food, la panthere, ect
+// add tuto ansible
 // Revoir tous les textes
-// AJouter france sur experience ppur expliquer d'aller voir en detail sur linkdin
+// Ajouter france sur experience opur expliquer d'aller voir en detail sur linkdin
 // Mettre a jour profil github
 
 // Faire une photo professionnel et mettre sur linkdin, malte, cv; github, portfolio
