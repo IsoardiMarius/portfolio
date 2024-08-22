@@ -85,6 +85,14 @@ const Assets = {
 	Hexacoffre: a('hexacoffre.svg'),
 	DigitalExpress: a('digitalexpress.png'),
 	Epitech: a('epitech.png'),
+	Dashboard1: a('dashboard1.png'),
+	Dashboard2: a('dashboard2.png'),
+	Dashboard3: a('dashboard3.png'),
+	Dashboard4: a('dashboard4.png'),
+	LeBouddoir1: a('lebouddoir1.png'),
+	LeBouddoir2: a('lebouddoir2.png'),
+	LeBouddoir3: a('lebouddoir3.png'),
+
 };
 
 export default Assets;
