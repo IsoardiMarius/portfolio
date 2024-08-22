@@ -4,6 +4,7 @@ import { getSkills } from './skills';
 // todo:
 // 3. add le bouddoir, oh my food, la panthere, ect
 // Revoir tous les textes
+// Mettre a jour profil github
 
 export const title = 'Home';
 
