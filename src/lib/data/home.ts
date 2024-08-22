@@ -2,8 +2,8 @@ import { Platform } from '$lib/types';
 import { getSkills } from './skills';
 
 // todo:
-// 1. Delete list contact on home
-// 3. Add project, resume
+// 3. add le bouddoir, oh my food, la panthere, ect
+// Revoir tous les textes
 
 export const title = 'Home';
 
