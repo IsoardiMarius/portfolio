@@ -2,12 +2,12 @@ import { Platform } from '$lib/types';
 import { getSkills } from './skills';
 
 // todo:
-// add tuto ansible
+// changer favicon
 // Revoir tous les textes
-// Ajouter france sur experience opur expliquer d'aller voir en detail sur linkdin
+// Ajouter phrase sur experience pour expliquer d'aller voir en detail sur linkedin
 // Mettre a jour profil github
 
-// Faire une photo professionnel et mettre sur linkdin, malte, cv; github, portfolio
+// Faire une photo professionnel et mettre sur linkedin, malte, cv, github, portfolio
 // Faire site digital express
 // Imprimer carte vistaprint
 

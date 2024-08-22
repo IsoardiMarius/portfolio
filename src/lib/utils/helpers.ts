@@ -138,7 +138,7 @@ export function computeExactDuration(from: Date, to: Date = new Date()): string 
 	const months = remaining / MONTH;
 	if (months >= 1) {
 		remaining = remaining % MONTH;
-		display.push(`${Math.trunc(months)} moi${months >= 2 ? 's' : ''}`);
+		display.push(`${Math.trunc(months)} mois`)
 	}
 
 	const weeks = remaining / WEEK;
