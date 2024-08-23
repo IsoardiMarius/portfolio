@@ -2,6 +2,7 @@
 	import ExperienceCard from '$lib/components/ExperienceCard/ExperienceCard.svelte';
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
 	import SearchPage from '$lib/components/SearchPage.svelte';
+	import { fade } from 'svelte/transition';
 	import { items, title } from '@data/experience';
 	import type { Experience } from '$lib/types';
 	import { isBlank } from '@riadh-adrani/utils';
@@ -26,11 +27,18 @@
 </script>
 
 <SearchPage {title} on:search={onSearch}>
+	<div class="mt-4 text-center animate-fadeInUp">
+		<p class="text-lg text-[var(--secondary-text)]">
+			Pour plus de détails sur mes expériences, vous pouvez consulter mon profil
+			<a href="https://www.linkedin.com/in/votre-lien-linkedin" target="_blank" class="text-[var(--link)] underline">LinkedIn</a>.
+		</p>
+	</div>
+	<!-- Additional Text with Animation -->
 	<div class="col items-center relative mt-10 flex-1">
 		{#if result.length === 0}
 			<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)] flex-1">
 				<UIcon icon="i-carbon-development" classes="text-3.5em" />
-				<p class="font-300">Could not find anything...</p>
+				<p class="font-300">Aucun expérience trouvée...</p>
 			</div>
 		{:else}
 			<div
@@ -52,5 +60,25 @@
 				</div>
 			{/each}
 		{/if}
+
 	</div>
 </SearchPage>
+
+<style lang="scss">
+  @layer utilities {
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fadeInUp {
+      animation: fadeInUp 0.5s ease-out;
+    }
+  }
+</style>

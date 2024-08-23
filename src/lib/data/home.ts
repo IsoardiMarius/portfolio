@@ -2,8 +2,6 @@ import { Platform } from '$lib/types';
 import { getSkills } from './skills';
 
 // todo:
-// Revoir tous les textes
-// Ajouter phrase sur experience pour expliquer d'aller voir en detail sur linkedin
 // Mettre a jour profil github
 
 // Faire une photo professionnel et mettre sur linkedin, malte, cv, github, portfolio

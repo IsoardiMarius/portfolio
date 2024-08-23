@@ -95,6 +95,14 @@ export const items = [
 		category: 'most-used'
 	}),
 	defineSkill({
+		slug: 'mysql-most-used',
+		color: 'blue',
+		description: 'MySQL est un système de gestion de bases de données relationnelles que j’ai utilisé pour gérer des données structurées dans mes projets.',
+		logo: Assets.MySql,
+		name: 'MySQL',
+		category: 'most-used'
+	}),
+	defineSkill({
 		slug: 'js',
 		color: 'yellow',
 		description: 'JavaScript est un langage de programmation que j’ai utilisé dans divers projets front-end pour créer des interfaces interactives et dynamiques.',
