@@ -2,7 +2,6 @@ import { Platform } from '$lib/types';
 import { getSkills } from './skills';
 
 // todo:
-// changer favicon
 // Revoir tous les textes
 // Ajouter phrase sur experience pour expliquer d'aller voir en detail sur linkedin
 // Mettre a jour profil github
