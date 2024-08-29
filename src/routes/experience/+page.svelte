@@ -30,7 +30,7 @@
 	<div class="mt-4 text-center animate-fadeInUp">
 		<p class="text-lg text-[var(--secondary-text)]">
 			Pour plus de détails sur mes expériences, vous pouvez consulter mon profil
-			<a href="https://www.linkedin.com/in/votre-lien-linkedin" target="_blank" class="text-[var(--link)] underline">LinkedIn</a>.
+			<a href="https://www.linkedin.com/in/marius-isoardi-057338233/" target="_blank" class="text-[var(--link)] underline">LinkedIn</a>.
 		</p>
 	</div>
 	<!-- Additional Text with Animation -->
