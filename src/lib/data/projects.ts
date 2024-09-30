@@ -44,7 +44,7 @@ export const items: Array<Project> = [
 			'Ce tutoriel explique comment installer et configurer Ansible sur un serveur Debian. Il couvre les bases de Ansible, y compris la création de playbooks, la gestion des variables, la gestion des inventaires, les modules et les plugins. Il est également utile pour les débutants qui souhaitent découvrir Ansible et son utilisation pour automatiser les tâches répétitives.',
 		shortDescription:
 			'Tutoriel Ansible pour installer et configurer Ansible sur un serveur Debian.',
-		links: [{ to: 'https://picayune-promotion-42d.notion.site/Mac-M1-deployment-ansible-galaxy-with-Debian-11-node-mysql-react-693e5b2ce3aa41378aa3d9d537584998?pvs=4', label: 'Voir le tutoriel' }], // Remplacez l'URL par le lien vers le projet réel si disponible
+		links: [{ to: 'https://pepper-trumpet-e77.notion.site/Mac-M1-deployment-ansible-galaxy-with-Debian-11-node-mysql-react-fff8e581ed67811388b0f4663d096044', label: 'Voir le tutoriel' }], // Remplacez l'URL par le lien vers le projet réel si disponible
 		logo: Assets.Ansible, // Assurez-vous d'avoir un logo approprié pour "OhMyFood"
 		name: 'Tutoriel Ansible',
 		period: {
