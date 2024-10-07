@@ -1,2 +1,2 @@
-export const data = '/cv3.pdf'
+export const data = '/cv.pdf'
 export const title = 'Curriculum Vitae';
