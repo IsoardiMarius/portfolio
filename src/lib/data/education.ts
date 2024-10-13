@@ -12,7 +12,7 @@ export const items: Array<Education> = [
 		period: { from: new Date(2024, 9, 1), to: new Date(2024, 9, 31) }, // assuming it covers the whole year 2022
 		shortDescription: 'Certification AWS Cloud Practitioner',
 		slug: 'aws-certified-cloud-practitioner',
-		subjects: ['AWS', 'Cloud Computing', 'Security', 'DevOps', 'Cloud Architecture', 'Management', 'DevOps'],
+		subjects: ['AWS', 'Cloud Computing', 'Security', 'DevOps', 'Cloud Architecture', 'Management'],
 	},
 	{
 		degree: "Master Pro Cloud",
