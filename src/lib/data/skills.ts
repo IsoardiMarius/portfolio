@@ -207,6 +207,38 @@ export const items = [
 		category: 'devops'
 	}),
 	defineSkill({
+		slug : 'AWS',
+		color: 'blue',
+		description: 'AWS est une plateforme de cloud computing que j’ai utilisé pour développer des applications cloud et des services cloud.',
+		logo: Assets.AWS,
+		name: 'AWS',
+		category: 'devops'
+	}),
+	defineSkill({
+		slug: 'Terraform',
+		color: 'violet',
+		description: 'Terraform est un outil de gestion de cloud que j’ai utilisé pour automatiser la création et la configuration de ressources cloud.',
+		logo: Assets.Terraform,
+		name: 'Terraform',
+		category: 'devops'
+	}),
+	defineSkill({
+		slug: 'Github Actions',
+		color: 'dark',
+		description: 'Github Actions est un outil de CI/CD que j’ai utilisé pour automatiser la création et la publication de packages et de déploiements.',
+		logo: Assets.Github,
+		name: 'Github Actions',
+		category: 'devops'
+	}),
+	defineSkill({
+		slug: 'Gitlab CI/CD',
+		color: 'orange',
+		description: 'Gitlab CI/CD est un outil de CI/CD que j’ai utilisé pour automatiser la création et la publication de packages et de déploiements.',
+		logo: Assets.Gitlab,
+		name: 'Gitlab CI/CD',
+		category: 'devops'
+	}),
+	defineSkill({
 		slug: 'kubernetes',
 		color: 'blue',
 		description: 'Kubernetes est un système d’orchestration de conteneurs que j’ai utilisé pour gérer le déploiement et la mise à l’échelle d’applications containerisées.',

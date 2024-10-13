@@ -3,6 +3,18 @@ import type { Education } from '../types';
 
 export const items: Array<Education> = [
 	{
+		degree: "AWS Certified Cloud Practitioner",
+		description: 'Cette certification permet de développer des compétences en matière de cloud computing, en particulier en utilisant AWS. Elle couvre les concepts de base du cloud, les services AWS, les architectures de cloud, la sécurité et la gouvernance de cloud. On également les compétences de gestion de projet et de développement de logiciels pour le cloud.',
+		location: 'France',
+		logo: Assets.AWS,
+		name: 'AWS Certified Cloud Practitioner',
+		organization: 'AWS',
+		period: { from: new Date(2024, 9, 1), to: new Date(2024, 9, 31) }, // assuming it covers the whole year 2022
+		shortDescription: 'Certification AWS Cloud Practitioner',
+		slug: 'aws-certified-cloud-practitioner',
+		subjects: ['AWS', 'Cloud Computing', 'Security', 'DevOps', 'Cloud Architecture', 'Management', 'DevOps'],
+	},
+	{
 		degree: "Master Pro Cloud",
 		description: 'Formation axée sur le développement de compétences avancées en informatique, couvrant un large éventail de sujets techniques et théoriques. Cette formation inclut des projets pratiques, des stages, et l\'acquisition de compétences en gestion de projets IT.',
 		location: 'France',
