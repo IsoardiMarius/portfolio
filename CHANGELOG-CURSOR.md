@@ -36,17 +36,17 @@ Ce fichier documente toutes les modifications importantes apportées au projet p
 - `src/lib/components/Carrousel/Carrousel.svelte`
 
 ### Changements apportés
-- Réimplémentation complète du carrousel pour adopter un style de carte similaire à la capture d'écran fournie
-- Ajout d'un fond d'image avec superposition de gradient pour améliorer la lisibilité
-- Ajout d'un badge "COMPÉTENCE" pour mettre en évidence le type de contenu
-- Amélioration de l'animation de transition entre les slides
-- Repositionnement des boutons de navigation pour une meilleure ergonomie
-- Ajout d'une description pour chaque compétence
-- Optimisation du mécanisme de défilement automatique
-- Implémentation d'une interface plus moderne et immersive
-- Utilisation de couleurs adaptées au thème global du site
+- Optimisation du carrousel pour une meilleure présentation des compétences
+- Déplacement de l'étiquette de catégorie et du nom en haut à gauche
+- Suppression de la description pour une interface plus épurée
+- Réduction de la largeur maximale (450px) pour une meilleure intégration dans la page
+- Utilisation d'images standardisées au centre du carrousel plutôt qu'en fond
+- Amélioration du contraste avec un dégradé sombre pour une meilleure lisibilité
+- Structure flexbox pour optimiser la disposition des éléments
+- Hauteur réduite pour un design plus compact
 
 ### Améliorations techniques
-- Refactorisation de la logique de navigation pour une meilleure maintenabilité
-- Ajout d'un nettoyage explicite du timer lors du démontage du composant
-- Amélioration de la réactivité du composant avec une meilleure prise en charge du redimensionnement 
+- Solution aux problèmes d'affichage des images de différentes tailles
+- Optimisation du rendu des images avec des dimensions maximales standards
+- Meilleure séparation des éléments d'interface avec une structure plus claire
+- Ajustements responsifs améliorés pour les appareils mobiles 

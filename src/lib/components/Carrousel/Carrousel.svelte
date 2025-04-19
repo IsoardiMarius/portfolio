@@ -73,11 +73,13 @@
 	<div class="carousel-track" bind:this={track}>
 		{#each items as item, i}
 			<div class="featured-card" class:active={i === currentIndex}>
-				<div class="card-background" style="background-image: url({getAssetURL(item.logo)}); background-color: {item.color || 'var(--soft-bg)'}"></div>
-				<div class="card-content">
+				<div class="card-header">
 					<span class="feature-badge">{item.category?.name || 'COMPÉTENCE'}</span>
 					<h3 class="card-title">{item.name}</h3>
-					<p class="card-description">{item.description || `Expertise en ${item.name}`}</p>
+				</div>
+				
+				<div class="card-image-container">
+					<img src={getAssetURL(item.logo)} alt={item.name} class="card-image" />
 				</div>
 			</div>
 		{/each}
@@ -108,7 +110,7 @@
 <style lang="scss">
 	.featured-carousel {
 		width: 100%;
-		max-width: 640px;
+		max-width: 450px;
 		position: relative;
 		border-radius: 16px;
 		overflow: hidden;
@@ -122,7 +124,7 @@
 		overflow-x: auto;
 		scrollbar-width: none;
 		scroll-behavior: smooth;
-		height: 360px;
+		height: 300px;
 		
 		&::-webkit-scrollbar {
 			display: none;
@@ -135,47 +137,21 @@
 		scroll-snap-align: start;
 		position: relative;
 		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9));
 		
 		&.active {
 			z-index: 2;
 		}
 	}
 	
-	.card-background {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-		filter: brightness(0.6);
-		transition: transform 0.6s ease;
-		
-		&::after {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
-		}
-		
-		.featured-card:hover & {
-			transform: scale(1.05);
-		}
-	}
-	
-	.card-content {
-		position: relative;
-		z-index: 2;
-		padding: 2rem;
-		height: 100%;
+	.card-header {
+		padding: 1.25rem;
 		display: flex;
 		flex-direction: column;
-		justify-content: flex-end;
+		align-items: flex-start;
+		gap: 0.5rem;
 	}
 	
 	.feature-badge {
@@ -188,24 +164,34 @@
 		font-weight: 600;
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
-		margin-bottom: 1rem;
 		width: fit-content;
 	}
 	
 	.card-title {
 		color: #ffffff;
-		font-size: 1.75rem;
+		font-size: 1.6rem;
 		font-weight: 700;
-		margin: 0 0 0.75rem 0;
+		margin: 0;
 		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 	}
 	
-	.card-description {
-		color: rgba(255, 255, 255, 0.9);
-		font-size: 1rem;
-		line-height: 1.5;
-		margin: 0;
-		max-width: 90%;
+	.card-image-container {
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 1rem;
+	}
+	
+	.card-image {
+		max-width: 160px;
+		max-height: 160px;
+		object-fit: contain;
+		transition: transform 0.4s ease;
+		
+		.featured-card:hover & {
+			transform: scale(1.1);
+		}
 	}
 	
 	.carousel-navigation {
@@ -266,18 +252,24 @@
 	@media (max-width: 768px) {
 		.featured-carousel {
 			border-radius: 12px;
+			max-width: 100%;
 		}
 		
 		.carousel-track {
-			height: 300px;
+			height: 270px;
 		}
 		
 		.card-title {
-			font-size: 1.5rem;
+			font-size: 1.4rem;
 		}
 		
-		.card-description {
-			font-size: 0.9rem;
+		.card-header {
+			padding: 1rem;
+		}
+		
+		.card-image {
+			max-width: 130px;
+			max-height: 130px;
 		}
 	}
 </style>
