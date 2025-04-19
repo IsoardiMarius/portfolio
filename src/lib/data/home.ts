@@ -15,10 +15,11 @@ export const name = 'Marius';
 export const lastName = 'Isoardi';
 
 export const description =
-	'Développeur et expert DevOps, je conçois des solutions digitales sur mesure qui allient innovation et performance. Disponible pour donner vie à vos projets freelance dès 250€ par jour. Construisons ensemble l\'avenir de votre entreprise.'
+	'Développeur Fullstack avec une forte expertise DevOps, je conçois des solutions techniques complètes alliant backend, frontend et infrastructure. Certifié AWS Cloud Practitioner, je m\'oriente vers les métiers du Cloud avec passion et détermination.'
 
 export const subDescription =
-	'Vous avez ci-dessous différents liens, comme mon Github, Linkedin, mon mail, etc. Pour un premier contact n\'hésitez pas à me contact idéalement par Linkedin / email.'
+	'Stack Dev: Spring Boot · Express · Flask · React · Java · JS · TS · Go · gRPC · Redis · MySQL\nStack Ops: Terraform · Kubernetes · Ansible · Docker · GitLab CI/CD · GitHub Actions · AWS · Azure\n\nActuellement disponible pour des projets freelance ambitieux ou une opportunité d\'emploi dans un environnement technique stimulant.'
+
 export const links: Array<{ platform: Platform; link: string }> = [
 	{ platform: Platform.GitHub, link: 'https://github.com/IsoardiMarius' },
 	{
@@ -35,4 +36,13 @@ export const links: Array<{ platform: Platform; link: string }> = [
 	}
 ];
 
-export const skills = getSkills('ansible', 'kubernetes', 'grafana', 'prometheus', 'nginx', 'linux', 'java', 'spring-boot', 'js', 'ts', 'node', 'express', 'mysql', 'alertmanager', 'postgres', 'prisma', 'jest', 'reactjs', 'tailwindcss', 'sass', 'android')
+export const skills = getSkills(
+	'java', 'spring-boot', 
+	'js', 'ts', 'node', 'express', 'reactjs',
+	'go', 
+	'mysql', 'redis',
+	'docker', 'kubernetes', 
+	'terraform', 'ansible', 
+	'aws', 'azure',
+	'linux', 'nginx'
+)
