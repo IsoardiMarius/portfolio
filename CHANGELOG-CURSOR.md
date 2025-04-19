@@ -29,3 +29,24 @@ Ce fichier documente toutes les modifications importantes apportées au projet p
   - Ajout des variables CSS `--accent-rgb` pour les dégradés
   - Ajout de variables CSS pour les fonds de carte et les éléments UI
 - Amélioration du design du titre principal avec un soulignement en dégradé 
+
+## 2023-06-XX - Refonte du composant Carrousel
+
+### Fichiers modifiés
+- `src/lib/components/Carrousel/Carrousel.svelte`
+
+### Changements apportés
+- Réimplémentation complète du carrousel pour adopter un style de carte similaire à la capture d'écran fournie
+- Ajout d'un fond d'image avec superposition de gradient pour améliorer la lisibilité
+- Ajout d'un badge "COMPÉTENCE" pour mettre en évidence le type de contenu
+- Amélioration de l'animation de transition entre les slides
+- Repositionnement des boutons de navigation pour une meilleure ergonomie
+- Ajout d'une description pour chaque compétence
+- Optimisation du mécanisme de défilement automatique
+- Implémentation d'une interface plus moderne et immersive
+- Utilisation de couleurs adaptées au thème global du site
+
+### Améliorations techniques
+- Refactorisation de la logique de navigation pour une meilleure maintenabilité
+- Ajout d'un nettoyage explicite du timer lors du démontage du composant
+- Amélioration de la réactivité du composant avec une meilleure prise en charge du redimensionnement 

@@ -5,207 +5,217 @@
 	import UIcon from '../Icon/UIcon.svelte';
 
 	export let items: Array<Skill> = [];
-	const delay = 2500;
+	const delay = 3000;
 
-	let element: HTMLElement;
-
-	let timeout: unknown;
-	let index = 0;
-	let toRight = true;
+	let container;
+	let track;
+	let currentIndex = 0;
 	let isHovered = false;
+	let timeout: ReturnType<typeof setTimeout> | null = null;
 
 	$: {
-		if (element) {
-			element.scroll({
-				left: index * 180,
+		if (track) {
+			track.scroll({
+				left: currentIndex * track.clientWidth,
 				behavior: 'smooth'
 			});
 		}
 	}
 
-	const slide = (right: boolean) => {
-		if (right) {
-			if (index < items.length - 1) {
-				index = index + 1;
-			} else {
-				index = index - 1;
-				toRight = false;
-			}
+	const nextSlide = () => {
+		if (currentIndex < items.length - 1) {
+			currentIndex++;
 		} else {
-			if (index > 0) {
-				index = index - 1;
-			} else {
-				index = index + 1;
-				toRight = true;
-			}
+			currentIndex = 0;
 		}
 	};
 
-	const toggle = (right: boolean) => {
+	const prevSlide = () => {
+		if (currentIndex > 0) {
+			currentIndex--;
+		} else {
+			currentIndex = items.length - 1;
+		}
+	};
+
+	const autoPlay = () => {
 		if (isHovered) return;
 		
-		clearTimeout(timeout as number);
-
+		clearTimeout(timeout);
 		timeout = setTimeout(() => {
-			slide(right);
-			toggle(toRight);
+			nextSlide();
+			autoPlay();
 		}, delay);
-	};
-
-	const toggleLeft = () => {
-		clearTimeout(timeout as number);
-		toRight = false;
-		slide(false);
-		toggle(toRight);
-	};
-
-	const toggleRight = () => {
-		clearTimeout(timeout as number);
-		toRight = true;
-		slide(true);
-		toggle(toRight);
 	};
 	
 	const handleMouseEnter = () => {
 		isHovered = true;
-		clearTimeout(timeout as number);
+		clearTimeout(timeout);
 	};
 	
 	const handleMouseLeave = () => {
 		isHovered = false;
-		toggle(toRight);
+		autoPlay();
 	};
 
 	onMount(() => {
-		toggle(true);
+		autoPlay();
+		
+		return () => {
+			if (timeout) {
+				clearTimeout(timeout);
+			}
+		};
 	});
 </script>
 
-<div class="carrousel-container" on:mouseenter={handleMouseEnter} on:mouseleave={handleMouseLeave}>
-	<div class="skills-title">
-		<span>Compétences</span>
-		<div class="skills-line"></div>
-	</div>
-
-	<div class="carrousel flex-[0.5] row-center">
-		<button
-			class="nav-button left-button row-center font-500 p-5px cursor-pointer"
-			on:click={toggleLeft}
-			aria-label="Précédent"
-		>
-			<UIcon icon="i-carbon-chevron-left" />
-		</button>
-
-		<div bind:this={element} class="carrousel-track row overflow-hidden w-180px">
-			{#each items as item}
-				<div class="skill-item box-content w-180px p-15px col-center">
-					<div class="skill-logo-wrapper">
-						<img class="skill-logo" src={getAssetURL(item.logo)} alt={item.name} />
-					</div>
-					<span class="skill-name">{item.name}</span>
+<div class="featured-carousel" bind:this={container} on:mouseenter={handleMouseEnter} on:mouseleave={handleMouseLeave}>
+	<div class="carousel-track" bind:this={track}>
+		{#each items as item, i}
+			<div class="featured-card" class:active={i === currentIndex}>
+				<div class="card-background" style="background-image: url({getAssetURL(item.logo)}); background-color: {item.color || 'var(--soft-bg)'}"></div>
+				<div class="card-content">
+					<span class="feature-badge">{item.category?.name || 'COMPÉTENCE'}</span>
+					<h3 class="card-title">{item.name}</h3>
+					<p class="card-description">{item.description || `Expertise en ${item.name}`}</p>
 				</div>
-			{/each}
-		</div>
-
-		<button
-			class="nav-button right-button row-center font-500 p-5px cursor-pointer"
-			on:click={toggleRight}
-			aria-label="Suivant"
-		>
-			<UIcon icon="i-carbon-chevron-right" />
-		</button>
+			</div>
+		{/each}
 	</div>
 	
-	<div class="skills-indicators">
-		{#each Array(Math.min(7, items.length)) as _, i}
-			<div class="indicator" class:active={index === i}></div>
-		{/each}
+	<div class="carousel-navigation">
+		<button class="nav-button prev-button" on:click={prevSlide} aria-label="Précédent">
+			<UIcon icon="i-carbon-chevron-left" />
+		</button>
+		
+		<div class="carousel-indicators">
+			{#each items as _, i}
+				<button 
+					class="indicator" 
+					class:active={i === currentIndex}
+					on:click={() => currentIndex = i}
+					aria-label={`Slide ${i + 1}`}
+				></button>
+			{/each}
+		</div>
+		
+		<button class="nav-button next-button" on:click={nextSlide} aria-label="Suivant">
+			<UIcon icon="i-carbon-chevron-right" />
+		</button>
 	</div>
 </div>
 
 <style lang="scss">
-	.carrousel-container {
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-		padding: 1.5rem;
-		border-radius: 12px;
-		background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.05) 0%, rgba(var(--accent-rgb), 0.1) 100%);
-		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+	.featured-carousel {
 		width: 100%;
-		max-width: 480px;
+		max-width: 640px;
+		position: relative;
+		border-radius: 16px;
+		overflow: hidden;
+		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 		margin: 0 auto;
 	}
 	
-	.skills-title {
+	.carousel-track {
 		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-		margin-bottom: 0.5rem;
+		scroll-snap-type: x mandatory;
+		overflow-x: auto;
+		scrollbar-width: none;
+		scroll-behavior: smooth;
+		height: 360px;
 		
-		span {
-			font-size: 1.1rem;
-			font-weight: 500;
-			color: var(--accent-text);
-		}
-		
-		.skills-line {
-			flex: 1;
-			height: 1px;
-			background: linear-gradient(90deg, var(--accent-text) 0%, transparent 100%);
+		&::-webkit-scrollbar {
+			display: none;
 		}
 	}
 	
-	.carrousel {
+	.featured-card {
+		min-width: 100%;
+		height: 100%;
+		scroll-snap-align: start;
 		position: relative;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	
-	.carrousel-track {
-		border-radius: 8px;
-		padding: 0.5rem 0;
-	}
-	
-	.skill-item {
-		transition: transform 0.3s;
+		overflow: hidden;
 		
-		&:hover {
-			transform: translateY(-5px);
+		&.active {
+			z-index: 2;
 		}
 	}
 	
-	.skill-logo-wrapper {
-		width: 100px;
-		height: 100px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin-bottom: 0.75rem;
-		border-radius: 12px;
-		padding: 0.75rem;
-		background-color: var(--soft-bg);
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-		transition: transform 0.3s, box-shadow 0.3s;
-		
-		&:hover {
-			transform: scale(1.05);
-			box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-		}
-	}
-	
-	.skill-logo {
+	.card-background {
+		position: absolute;
+		top: 0;
+		left: 0;
 		width: 100%;
 		height: 100%;
-		object-fit: contain;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		filter: brightness(0.6);
+		transition: transform 0.6s ease;
+		
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
+		}
+		
+		.featured-card:hover & {
+			transform: scale(1.05);
+		}
 	}
 	
-	.skill-name {
-		font-size: 0.9rem;
-		font-weight: 500;
-		margin-top: 0.5rem;
-		color: var(--main-text);
+	.card-content {
+		position: relative;
+		z-index: 2;
+		padding: 2rem;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+	}
+	
+	.feature-badge {
+		display: inline-block;
+		background-color: rgba(59, 209, 174, 0.8);
+		color: #111827;
+		padding: 0.35rem 0.75rem;
+		border-radius: 4px;
+		font-size: 0.75rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		margin-bottom: 1rem;
+		width: fit-content;
+	}
+	
+	.card-title {
+		color: #ffffff;
+		font-size: 1.75rem;
+		font-weight: 700;
+		margin: 0 0 0.75rem 0;
+		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	}
+	
+	.card-description {
+		color: rgba(255, 255, 255, 0.9);
+		font-size: 1rem;
+		line-height: 1.5;
+		margin: 0;
+		max-width: 90%;
+	}
+	
+	.carousel-navigation {
+		position: absolute;
+		bottom: 1.5rem;
+		right: 1.5rem;
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		z-index: 3;
 	}
 	
 	.nav-button {
@@ -213,58 +223,62 @@
 		height: 36px;
 		border: none;
 		border-radius: 50%;
-		background-color: var(--soft-bg);
-		color: var(--accent-text);
+		background-color: rgba(255, 255, 255, 0.15);
+		color: #ffffff;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		z-index: 2;
 		cursor: pointer;
 		transition: all 0.2s;
+		backdrop-filter: blur(4px);
 		
 		&:hover {
-			background-color: var(--accent-text);
-			color: var(--soft-bg);
-			transform: scale(1.1);
+			background-color: rgba(255, 255, 255, 0.25);
+			transform: translateY(-2px);
 		}
 	}
 	
-	.left-button {
-		margin-right: 0.5rem;
-	}
-	
-	.right-button {
-		margin-left: 0.5rem;
-	}
-	
-	.skills-indicators {
+	.carousel-indicators {
 		display: flex;
-		justify-content: center;
 		gap: 0.5rem;
-		margin-top: 0.5rem;
+	}
+	
+	.indicator {
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background-color: rgba(255, 255, 255, 0.3);
+		border: none;
+		padding: 0;
+		cursor: pointer;
+		transition: all 0.3s;
 		
-		.indicator {
-			width: 8px;
-			height: 8px;
-			border-radius: 50%;
-			background-color: var(--border);
-			transition: all 0.3s;
-			
-			&.active {
-				background-color: var(--accent-text);
-				transform: scale(1.2);
-			}
+		&.active {
+			background-color: #ffffff;
+			transform: scale(1.2);
+		}
+		
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.5);
 		}
 	}
 	
 	@media (max-width: 768px) {
-		.carrousel-container {
-			padding: 1rem;
+		.featured-carousel {
+			border-radius: 12px;
 		}
 		
-		.skill-logo-wrapper {
-			width: 80px;
-			height: 80px;
+		.carousel-track {
+			height: 300px;
+		}
+		
+		.card-title {
+			font-size: 1.5rem;
+		}
+		
+		.card-description {
+			font-size: 0.9rem;
 		}
 	}
 </style>
+
