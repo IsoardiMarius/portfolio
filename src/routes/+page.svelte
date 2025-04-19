@@ -61,34 +61,33 @@
 	<title>{useTitle(title, titleSuffix)}</title>
 </svelte:head>
 
-<div class="hero-container col self-center flex-1 justify-center items-center p-y-0px p-x-10px">
-	<div class="content-wrapper md:flex-row md:justify-between items-center max-w-[1200px] w-full mx-auto">
-		<div class="intro-section px-4 md:px-6 py-8 md:py-12 md:flex-1 transition-all"
-			class:fade-in={visible}>
+<div class="hero-container">
+	<div class="gradient-bg"></div>
+	<div class="content-wrapper">
+		<div class="intro-section" class:fade-in={visible}>
+			<MainTitle classes="main-title">
+				<span class="first-name">{name}</span> 
+				<span class="last-name">{lastName}</span>
+			</MainTitle>
 			
-			<MainTitle classes="md:text-left">{name} {lastName}</MainTitle>
-			
-			<div class="job-title-wrapper h-[32px] my-3 overflow-hidden">
-				<p class="job-title text-[var(--accent-text)] md:text-left text-[1.5em] font-medium">{currentJobTitle}<span class="cursor">|</span></p>
+			<div class="job-title-wrapper">
+				<p class="job-title">{currentJobTitle}<span class="cursor">|</span></p>
 			</div>
 			
-			<p class="description text-[var(--tertiary-text)] text-center md:text-left text-[1.2em] font-light leading-relaxed my-4 max-w-[650px]"
-				class:slide-in={visible}>
+			<p class="description" class:slide-in={visible}>
 				{description}
 			</p>
 			
-			<div class="stack-info my-5 py-3 px-4 bg-[var(--card-bg)] rounded-md shadow-sm"
-				class:fade-in-delay={visible}>
-				<p class="stack whitespace-pre-line text-[var(--tertiary-text)] text-center md:text-left text-[1em] font-light leading-relaxed">
+			<div class="stack-info" class:fade-in-delay={visible}>
+				<p class="stack">
 					{subDescription}
 				</p>
 			</div>
 			
-			<div class="social-links mt-6 row justify-center md:justify-start gap-4"
-				class:slide-up={visible}>
+			<div class="social-links" class:slide-up={visible}>
 				{#each links as link}
 					<a
-						class="social-icon-link p-2 bg-[var(--soft-bg)] rounded-full hover:scale-110 transition-transform"
+						class="social-icon-link"
 						href={`${isEmail(link.link) ? 'mailto:' : ''}${link.link}`}
 						target="_blank"
 						rel="noreferrer"
@@ -100,7 +99,7 @@
 			</div>
 		</div>
 		
-		<div class="skills-showcase md:flex-1 transition-all" class:slide-in-right={visible}>
+		<div class="skills-showcase" class:slide-in-right={visible}>
 			<Carrousel items={skills ?? skillsItems} />
 		</div>
 	</div>
@@ -108,19 +107,193 @@
 
 <style lang="scss">
 	.hero-container {
+		position: relative;
 		min-height: calc(100vh - 80px);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+	}
+	
+	.gradient-bg {
+		position: absolute;
+		top: -100px;
+		right: -100px;
+		width: 600px;
+		height: 600px;
+		border-radius: 50%;
+		background: radial-gradient(
+			circle,
+			rgba(var(--accent-rgb), 0.08) 0%,
+			rgba(var(--accent-rgb), 0.05) 35%,
+			rgba(var(--accent-rgb), 0.01) 70%,
+			transparent 100%
+		);
+		z-index: 0;
+		opacity: 0.7;
+		filter: blur(40px);
 	}
 	
 	.content-wrapper {
 		display: flex;
 		flex-direction: column;
-		gap: 2rem;
+		gap: 3rem;
+		max-width: 1200px;
+		width: 100%;
+		margin: 0 auto;
+		padding: 2rem 1rem;
+		z-index: 1;
+		
+		@media (min-width: 1024px) {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+	
+	.intro-section {
+		padding: 0 1rem;
+		z-index: 2;
+		max-width: 600px;
+		
+		@media (min-width: 768px) {
+			padding: 0 2rem;
+		}
+	}
+	
+	.main-title {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+		text-align: center;
+		
+		@media (min-width: 768px) {
+			font-size: 3rem;
+			text-align: left;
+		}
+		
+		.first-name {
+			color: var(--main-text);
+		}
+		
+		.last-name {
+			color: var(--accent-text);
+			position: relative;
+			
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: -8px;
+				left: 0;
+				width: 100%;
+				height: 3px;
+				background: linear-gradient(90deg, var(--accent-text), transparent);
+				border-radius: 3px;
+			}
+		}
+	}
+	
+	.job-title-wrapper {
+		height: 32px;
+		margin: 1.5rem 0;
+		overflow: hidden;
+	}
+	
+	.job-title {
+		color: var(--accent-text);
+		font-size: 1.5rem;
+		font-weight: 500;
+		margin: 0;
+		text-align: center;
+		
+		@media (min-width: 768px) {
+			text-align: left;
+		}
 	}
 	
 	.cursor {
 		animation: blink 1s infinite;
 	}
 	
+	.description {
+		color: var(--tertiary-text);
+		font-size: 1.2rem;
+		font-weight: 300;
+		line-height: 1.6;
+		margin: 1.5rem 0;
+		text-align: center;
+		
+		@media (min-width: 768px) {
+			text-align: left;
+		}
+	}
+	
+	.stack-info {
+		margin: 1.5rem 0;
+		padding: 1.25rem;
+		border-radius: 12px;
+		background: linear-gradient(135deg, 
+			rgba(var(--accent-rgb), 0.05) 0%, 
+			rgba(var(--accent-rgb), 0.1) 100%
+		);
+		border-left: 3px solid var(--accent-text);
+		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+	}
+	
+	.stack {
+		white-space: pre-line;
+		color: var(--tertiary-text);
+		font-size: 1rem;
+		font-weight: 300;
+		line-height: 1.6;
+		text-align: center;
+		
+		@media (min-width: 768px) {
+			text-align: left;
+		}
+	}
+	
+	.social-links {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		margin-top: 2rem;
+		
+		@media (min-width: 768px) {
+			justify-content: flex-start;
+		}
+	}
+	
+	.social-icon-link {
+		padding: 0.75rem;
+		background-color: var(--soft-bg);
+		border-radius: 50%;
+		transition: all 0.3s;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+		
+		&:hover {
+			transform: translateY(-5px) scale(1.1);
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+			background-color: var(--accent-text);
+			
+			:global(svg) {
+				color: white !important;
+			}
+		}
+	}
+	
+	.skills-showcase {
+		flex: 1;
+		z-index: 2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		@media (min-width: 1024px) {
+			justify-content: flex-end;
+		}
+	}
+	
+	/* Animations */
 	@keyframes blink {
 		0%, 100% { opacity: 1; }
 		50% { opacity: 0; }
@@ -190,19 +363,5 @@
 			opacity: 1;
 			transform: translateY(0);
 		}
-	}
-	
-	@media (max-width: 768px) {
-		.content-wrapper {
-			padding: 1rem 0;
-		}
-		
-		.skills-showcase {
-			margin-top: 2rem;
-		}
-	}
-	
-	.stack-info {
-		border-left: 3px solid var(--accent-text);
 	}
 </style>
